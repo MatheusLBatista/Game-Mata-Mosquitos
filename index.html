@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onresize="adjustGamesSize()">
+
+    <div class="panel">
+        <div class="lives">
+            <img id="life1" src="imagens/imagens/coracao_cheio.png" alt="" />
+            <img id="life2" src="imagens/imagens/coracao_cheio.png" alt="" />
+            <img id="life3" src="imagens/imagens/coracao_cheio.png" alt="" />
+        </div>
+
+        <div class="stopwatch">Tempo restante: <span id="stopwatch"></span></div>
+    </div>
+
+
+    <script>
+        document.getElementById('stopwatch').innerHTML = time
+
+        var createMosquito = setInterval(function() {
+            randomPosition()
+        }, createMosquitoTime);
+    </script>
+    
+</body>
+</html>
